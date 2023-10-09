@@ -972,7 +972,7 @@ class AttendantRegister(tk.Frame): #inherts frame, which makes a blank frame to 
 
         url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&"
         # link generated
-        r = requests.get(url + "origins=" + "CM133SB" + "&destinations=" + postcode + "&key=" + apikey)
+        r = requests.get(url + "origins=" + "XXXX" + "&destinations=" + postcode + "&key=" + apikey)
         status = r.json()["rows"][0]["elements"][0]["status"]
         if status != "OK":
             messagebox.showerror("Postcode", "Please enter a valid postcode.")
@@ -1878,7 +1878,7 @@ class BookingForm(tk.Frame): #inherts frame, which makes a blank frame to add wi
         url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&"
         try:
             # link generated
-            r = requests.get(url + "origins=" + "CM133SB" + "&destinations=" + postcode + "&key=" + apikey)
+            r = requests.get(url + "origins=" + "XXXX" + "&destinations=" + postcode + "&key=" + apikey)
             distance = r.json()["rows"][0]["elements"][0]["distance"]["value"]
             return True, distance
         except:
@@ -2181,7 +2181,7 @@ class BookingForm(tk.Frame): #inherts frame, which makes a blank frame to add wi
     def InsertIntoAttendants(self):
         with sqlite3.connect("NEA_Customer.db")as db: #establish connection with db
             cursor = db.cursor()
-            values = ("testemail4@gmail.com","Attendant4","Lastname4","A-ALastname4123456","cm133sb")
+            values = ("testemail4@gmail.com","Attendant4","Lastname4","A-ALastname4123456","XXXX")
             sql = """INSERT INTO Attendants(attendant_email, attendant_fname, attendant_lname, attendant_username, attendant_postcode)
             VALUES(?, ?, ?, ?, ?)"""
 
