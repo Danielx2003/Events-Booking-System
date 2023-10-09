@@ -9,13 +9,13 @@ For security reasons, the database containing all the user information was not a
 
 Password hashing was a key feature of the program. Hash ```sha256``` with 310000 iterations was used to improve the security of the database, ensuring if the database was breached, then all user passwords were hashesd securely. A salt was also added to the hash to greatly improve the security. The salt consisted of a 32 length string of random digits, generated from the operating system.
 
-A verification process was implemeted, in which users would need to authenticate their login attempt. This was done by a random 6 digit code being emailed to the email address the user entered. If the code entered matched the one generated, they would be granted access. However, if invalid, they would not be given access to the system. __
-![image](https://github.com/Danielx2003/Events-Booking-System/assets/70431670/fa4b7f9d-bc98-4438-a798-80d84c71a07d) __
-The above image is an example of the email a user would recieve containing their code. __
+A verification process was implemeted, in which users would need to authenticate their login attempt. This was done by a random 6 digit code being emailed to the email address the user entered. If the code entered matched the one generated, they would be granted access. However, if invalid, they would not be given access to the system.  
+![image](https://github.com/Danielx2003/Events-Booking-System/assets/70431670/fa4b7f9d-bc98-4438-a798-80d84c71a07d)  
+The above image is an example of the email a user would recieve containing their code.  
 
-Details of the booking, including price, location and date would be emailed to the client and the attendant selected. This was to ensure that both parties were aware of the booking and could addiquetely prepare for the event. __
+Details of the booking, including price, location and date would be emailed to the client and the attendant selected. This was to ensure that both parties were aware of the booking and could addiquetely prepare for the event.  
 ![image](https://github.com/Danielx2003/Events-Booking-System/assets/70431670/47bc9743-e563-4629-901c-5b38adea1bc7)
-__
+  
 The above image shows an example of an email recieved after a successful booking was made.
 
 The price of the booking was calcualted based on many factors, including; distance to the venue, length of hire, prints per booth use, days till hire and more.
@@ -33,9 +33,9 @@ To ensure that the name entered was a mistake, and did match that of one within 
 
 SQL was a massive feature of this program, with many calls made, such as aggregate calls.
 
-__
+  
 ![image](https://github.com/Danielx2003/Events-Booking-System/assets/70431670/9a315deb-e8a8-432a-9649-791bec22540f)
-__
+  
 Clear and concise alert messages were implemented to help the user fix any issues they may have encountered.
 Error handling was vital for this project, as if the program crashed, all user data that had not been inputted into the database would have been lost.
 
